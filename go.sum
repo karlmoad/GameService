@@ -1,0 +1,14 @@
+github.com/gbrlsnchs/jwt/v2 v2.0.0 h1:4iEVJykJPXrCimVaQJAfBWKAvuzDJi5fDdUBdrdTZ3M=
+github.com/gbrlsnchs/jwt/v2 v2.0.0/go.mod h1:7kIj4oeJPffUpLL8RnU5Y3xT1Sm/VuFqjv8T1tqhqc8=
+github.com/gorilla/context v1.1.1 h1:AWwleXJkX/nhcU9bZSnZoi3h/qGYqQAGhq6zZe/aQW8=
+github.com/gorilla/context v1.1.1/go.mod h1:kBGZzfjB9CEq2AlWe17Uuf7NDRt0dE0s8S51q0aT7Yg=
+github.com/gorilla/handlers v1.4.2 h1:0QniY0USkHQ1RGCLfKxeNHK9bkDHGRYGNDFBCS+YARg=
+github.com/gorilla/handlers v1.4.2/go.mod h1:Qkdc/uu4tH4g6mTK6auzZ766c4CA0Ng8+o/OAirnOIQ=
+github.com/gorilla/mux v1.7.3 h1:gnP5JzjVOuiZD07fKKToCAOjS0yOpj/qPETTXCCS6hw=
+github.com/gorilla/mux v1.7.3/go.mod h1:1lud6UwP+6orDFRuTfBEV8e9/aOM/c4fVVCaMa2zaAs=
+github.com/karlmoad/authentication v0.0.0-20190723115512-4cb392f7a9c3 h1:215V6b7QQ/hTC5pui7TmLpThxnhODCSMVp96IAxVa3c=
+github.com/karlmoad/authentication v0.0.0-20190723115512-4cb392f7a9c3/go.mod h1:5Qrg9S9zV2caFog1lxRjVwmhf/UDoTWa60rdaqglw/g=
+github.com/karlmoad/authentication v0.0.0-20190724112621-89da8cad8065 h1:DRY6KyzhDpCgwNoOKQwviqIOQtw01lO2LcSpHX0U2PU=
+github.com/karlmoad/authentication v0.0.0-20190724112621-89da8cad8065/go.mod h1:5Qrg9S9zV2caFog1lxRjVwmhf/UDoTWa60rdaqglw/g=
+github.com/karlmoad/http v0.0.0-20190719141601-bdccdbee6591 h1:H/zx0/mFR0ZpOj8hrTqOY3ygtCYZBAWFKi0qnmv0tF0=
+github.com/karlmoad/http v0.0.0-20190719141601-bdccdbee6591/go.mod h1:9M6C9GE1webPChydUSXqzZUNIhxxdYAsAa/LeZjmrT0=
