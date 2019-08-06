@@ -20,7 +20,7 @@ docker: clean dist
 	docker build -t game_service:$(TAG) .
 
 gcr: docker
-	docker tag game_service:$(TAG) us.cgr.io/$(PROJECT_ID)/game_service:$(TAG)
+	docker tag game_service:$(TAG) us.gcr.io/$(PROJECT_ID)/game_service:$(TAG)
 	docker push us.gcr.io/$(PROJECT_ID)/game_service:$(TAG)
 
 clean:
