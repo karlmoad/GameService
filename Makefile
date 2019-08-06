@@ -21,7 +21,7 @@ docker: clean dist
 
 gcr: docker
 	docker tag game_service:$(TAG) us.cgr.io/$(PROJECT_ID)/game_service:$(TAG)
-	docker push us.cgr.io/$(PROJECT_ID)/game_service:$(TAG)
+	docker push us.gcr.io/$(PROJECT_ID)/game_service:$(TAG)
 
 clean:
 	rm -f $(DIST_PATH)/GameService
