@@ -29,6 +29,7 @@ func main() {
 
 	// Setup the router and routes
 	router := mux.NewRouter()
+	router.HandleFunc("/", HealthCheckHandler).Methods("GET")
 	router.HandleFunc("/draw", auth.AuthenticationHandler(game.GameDrawHandler)).Methods("GET")
 	router.HandleFunc("/draw/{count}", auth.AuthenticationHandler(game.GameDrawHandler)).Methods("GET")
 
@@ -48,4 +49,12 @@ func main() {
 
 	log.Println("___ END OF LINE ___")
 
+}
+
+func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
+	// Per K8s ingress rules only healthy endpoint can be routed
+	// reply with http.200 to signal healthy status
+	w.WriteHeader(http.StatusOK)
+	return
+	
 }
