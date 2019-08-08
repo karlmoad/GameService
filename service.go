@@ -58,7 +58,7 @@ func main() {
 
 func HealthCheckHandlerRawRoot(w http.ResponseWriter, r *http.Request) {
 	// identify which route is called for root health check
-	// given GKE Ingress does not handle rewrite target
+	// given K8s Ingress does not handle rewrite target
 	log.Printf("Health Check to RAW ROOT path /")
 	w.WriteHeader(http.StatusOK)
 	return
@@ -67,7 +67,7 @@ func HealthCheckHandlerRawRoot(w http.ResponseWriter, r *http.Request) {
 
 func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
 	// identify which route is called for root health check
-	// given GKE Ingress does not handle rewrite target
+	// given K8s Ingress does not handle rewrite target
 	log.Printf("Health Check to root /games/")
 	w.WriteHeader(http.StatusOK)
 	return
