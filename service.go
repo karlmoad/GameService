@@ -29,9 +29,10 @@ func main() {
 
 	// Setup the router and routes
 	router := mux.NewRouter()
-	router.HandleFunc("/", HealthCheckHandler).Methods("GET")
-	router.HandleFunc("/draw", auth.AuthenticationHandler(game.GameDrawHandler)).Methods("GET")
-	router.HandleFunc("/draw/{count}", auth.AuthenticationHandler(game.GameDrawHandler)).Methods("GET")
+	router.HandleFunc("/", HealthCheckHandlerRawRoot).Methods("GET")
+	router.HandleFunc("/games/", HealthCheckHandler).Methods("GET")
+	router.HandleFunc("/games/draw", auth.AuthenticationHandler(game.GameDrawHandler)).Methods("GET")
+	router.HandleFunc("/games/draw/{count}", auth.AuthenticationHandler(game.GameDrawHandler)).Methods("GET")
 
 	// CORS options
 	headersOk := handlers.AllowedHeaders([]string{"Content-Type", "Authorization","Content-Length", "Accept"})
@@ -51,10 +52,24 @@ func main() {
 
 }
 
-func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
-	// Per K8s ingress rules only healthy endpoint can be routed
-	// reply with http.200 to signal healthy status
+// Per K8s ingress rules only healthy endpoint can be routed
+// reply with http.200 to signal healthy status,
+// TODO: stand in for now add better Health Check functionality when needed
+
+func HealthCheckHandlerRawRoot(w http.ResponseWriter, r *http.Request) {
+	// identify which route is called for root health check
+	// given K8s Ingress does not handle rewrite target
+	log.Printf("Health Check to RAW ROOT path /")
 	w.WriteHeader(http.StatusOK)
 	return
 	
+}
+
+func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
+	// identify which route is called for root health check
+	// given K8s Ingress does not handle rewrite target
+	log.Printf("Health Check to root /games/")
+	w.WriteHeader(http.StatusOK)
+	return
+
 }
