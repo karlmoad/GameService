@@ -23,6 +23,9 @@ func GameDrawHandler(w http.ResponseWriter, r *http.Request) {
 
 	if val, ok := params["count"]; ok {
 		if num, err := strconv.Atoi(val); err == nil {
+			if num > 500 {
+				num = 500  // Add overall throttle to total allowed request count
+			}
 			count = num
 		}
 	}

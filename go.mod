@@ -7,5 +7,5 @@ require (
 	github.com/gorilla/context v1.1.1
 	github.com/gorilla/handlers v1.4.2 // indirect
 	github.com/gorilla/mux v1.7.3
-	github.com/karlmoad/authentication v0.0.0-20190724112621-89da8cad8065 // indirect
+	github.com/karlmoad/authentication v0.0.0-20190809143033-2cdd7fe43f14 // indirect
 )
